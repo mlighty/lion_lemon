@@ -1,0 +1,25 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://lionlemonlaw.com/sitemap.xml
+
+# Block common spam crawlers
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot  
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+# Allow important crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawl delay for all bots
+Crawl-delay: 1
