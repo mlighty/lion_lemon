@@ -6,13 +6,13 @@ export default function AccessibilityWidget() {
       <span role="alert" className="static box-content inline h-auto w-auto z-auto mt-0 left-auto top-auto md:absolute md:aspect-auto md:box-border md:block md:h-px md:overscroll-x-auto md:overscroll-y-auto md:snap-align-none md:snap-normal md:snap-none md:decoration-auto md:underline-offset-auto md:w-[200px] md:z-[-1] md:overflow-hidden md:[mask-position:0%] md:bg-left-top md:-mt-px md:scroll-m-0 md:scroll-p-[auto] md:left-0 md:top-0">
         Press Alt+1 for screen-reader mode, Alt+0 to cancel
       </span>
-      <access-widget-ui className="absolute text-black text-base block h-0 leading-[normal] origin-[0px_0px] w-0 left-0 right-[375px] top-0 bottom-[1000px] font-times_new_roman md:right-[1280px]">
+      <div className="absolute text-black text-base block h-0 leading-[normal] origin-[0px_0px] w-0 left-0 right-[375px] top-0 bottom-[1000px] font-times_new_roman md:right-[1280px]">
         <div className="box-border"></div>
-      </access-widget-ui>
+      </div>
       <a href="https://accessibe.com/blog/knowledgebase/screen-reader-guide" className="absolute text-cyan-600 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[100%_100%] box-border block h-px w-[200px] z-[-1] overflow-hidden bg-right -mt-px left-0 top-0">
         Accessibility Screen-Reader Guide, Feedback, and Issue Reporting | New window
       </a>
-      <access-widget-ui className="absolute text-black text-base block h-0 leading-[normal] origin-[0px_0px] w-0 left-0 right-[375px] top-0 bottom-[1000px] font-times_new_roman md:right-[1280px]">
+      <div className="absolute text-black text-base block h-0 leading-[normal] origin-[0px_0px] w-0 left-0 right-[375px] top-0 bottom-[1000px] font-times_new_roman md:right-[1280px]">
         <div className="box-border">
           <div role="region" aria-label="Skip Links" className="fixed box-border z-[2147483647] left-0 top-0">
             <div className="box-border"></div>
@@ -36,8 +36,8 @@ export default function AccessibilityWidget() {
             </div>
           </div>
         </div>
-      </access-widget-ui>
-      <access-widget-ui className="absolute text-black text-base block h-0 leading-[normal] origin-[0px_0px] w-0 left-0 right-[375px] top-0 bottom-[1000px] font-times_new_roman md:right-[1280px]">
+      </div>
+      <div className="absolute text-black text-base block h-0 leading-[normal] origin-[0px_0px] w-0 left-0 right-[375px] top-0 bottom-[1000px] font-times_new_roman md:right-[1280px]">
         <div className="box-border">
           <button aria-label="Open accessiBe: accessibility options, statement and help" className="fixed text-zinc-600 text-[13.3333px] bg-blue-600 block h-[30px] text-center w-[30px] z-[2147483647] p-0 rounded-[50%] left-2.5 bottom-0 font-arial md:h-[45px] md:w-[45px] md:left-5 md:bottom-5">
             <span className="text-white box-border">
@@ -48,7 +48,7 @@ export default function AccessibilityWidget() {
             </span>
           </button>
         </div>
-      </access-widget-ui>
+      </div>
     </>
   );
 }
