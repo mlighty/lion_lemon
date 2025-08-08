@@ -29,8 +29,8 @@ export default function Header() {
       <div className="items-center bg-zinc-50 box-border flex justify-around p-4 md:bg-transparent md:justify-between">
         <div className="box-border flex h-auto md:h-full">
           <a href="/" className="relative text-cyan-600 box-border block">
-            <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/14.webp" alt="" sizes="(max-width: 335px) 100vw, 335px" className="aspect-[auto_335_/_78] box-border hidden max-w-full w-[335px] md:block" />
-            <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/20.png" alt="" sizes="(max-width: 240px) 100vw, 240px" className="aspect-[auto_240_/_56] box-border block max-w-full w-60 md:hidden" />
+            <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/14.webp" alt="Lion Lemon Law logo" sizes="(max-width: 335px) 100vw, 335px" className="aspect-[auto_335_/_78] box-border hidden max-w-full w-[335px] md:block" />
+            <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/20.png" alt="Lion Lemon Law mobile logo" sizes="(max-width: 240px) 100vw, 240px" className="aspect-[auto_240_/_56] box-border block max-w-full w-60 md:hidden" />
           </a>
         </div>
         <nav className="items-center box-border hidden grow justify-center min-h-0 min-w-0 px-4 md:flex md:min-h-[auto] md:min-w-[auto]">

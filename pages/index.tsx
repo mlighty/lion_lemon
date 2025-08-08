@@ -56,10 +56,17 @@ export default function Home() {
       <SchemaMarkup />
 
       <div className="text-zinc-600 text-lg not-italic normal-nums font-normal accent-auto box-border block tracking-[normal] leading-[27px] list-outside list-disc overflow-x-hidden overflow-y-auto text-start indent-[0px] normal-case visible border-separate font-source_sans_pro">
+        {/* Skip Links for Accessibility */}
+        <a 
+          href="#main-content" 
+          className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:px-4 focus:py-2 focus:bg-blue-600 focus:text-white focus:underline"
+        >
+          Skip to main content
+        </a>
         <AccessibilityWidget />
         <Header />
         <div className="box-border pt-[152px] md:pt-[153px]">
-          <main className="box-border">
+          <main id="main-content" className="box-border">
             <article className="bg-white box-border">
               <HeroSection />
               <VerdictSection />
