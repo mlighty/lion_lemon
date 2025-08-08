@@ -257,104 +257,148 @@ export default function ManufacturerPage({ manufacturer, manufacturerName }: Man
           <main id="main-content" className="box-border">
             <article className="bg-white box-border">
               
-              {/* Hero Section - matching homepage structure */}
-              <header className="relative bg-slate-900 box-border flex flex-col justify-center w-full overflow-hidden pt-0 pb-10 md:block md:flex-row md:justify-normal md:pt-10">
-                <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/11.webp" alt={`${manufacturerName} lemon law attorneys helping clients with defective vehicles`} sizes="(max-width: 1440px) 100vw, 1440px" className="static aspect-[auto_1440_/_734] box-border hidden h-full max-w-full object-cover w-full right-0 inset-y-0 md:absolute md:block" loading="lazy" />
-                <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/16.webp" alt={`${manufacturerName} lemon law mobile hero image`} sizes="(max-width: 960px) 100vw, 960px" className="static aspect-[auto_960_/_866] box-border block h-full max-w-full min-h-[auto] min-w-[auto] object-cover w-full right-0 inset-y-0 md:absolute md:hidden md:min-h-0 md:min-w-0" loading="lazy" />
-                <div className="static items-center box-border flex flex-col min-h-[auto] min-w-[auto] w-full pt-6 px-4 left-[60%] md:relative md:[align-items:normal] md:block md:flex-row md:min-h-0 md:min-w-0 md:w-[500px] md:pt-0">
-                  <h1 className="text-white text-sm box-border clear-both tracking-[4.48px] leading-5 min-h-[auto] min-w-[auto] font-source_sans_pro md:min-h-0 md:min-w-0">California {manufacturerName} Lemon Law Attorneys</h1>
-                  <span className="text-zinc-50 text-5xl box-border block leading-[60px] min-h-[auto] min-w-[auto] text-center md:text-[68px] md:inline md:leading-[85px] md:min-h-0 md:min-w-0 md:text-left">
-                    Have A {manufacturerName} Lemon? <span className="text-yellow-400 text-5xl box-border block leading-[60px] text-center md:text-[68px] md:leading-[85px] md:text-left">We Can Help.</span>
-                  </span>
-                  <div className="box-border max-w-none min-h-[auto] min-w-[auto] w-full mt-4 md:max-w-md md:min-h-0 md:min-w-0">
-                    <ContactForm />
-                  </div>
-                </div>
-              </header>
+              {/* Simple Page Layout - matching original structure */}
+              <div className="bg-white py-8 px-4">
+                <div className="max-w-6xl mx-auto">
+                  
+                  {/* Page Title */}
+                  <header className="mb-8">
+                    <h1 className="text-4xl md:text-5xl font-bold text-blue-900 mb-4 font-oswald">
+                      {manufacturerName} Lemon Law Information
+                    </h1>
+                  </header>
 
-              {/* Content Section - matching homepage layout */}
-              <div className="bg-white box-border clear-both flow-root max-w-full w-full mx-auto px-[19.98px] py-[37.5px] md:w-auto md:p-[60px]">
-                <div className="box-border mx-auto">
-                  <div className="box-border clear-both gap-x-9 flex flex-wrap max-w-full gap-y-9 w-[345px] mx-auto md:flex-nowrap md:w-[1080px]">
-                    <div className="box-border basis-full grow break-words mb-[19.8px] md:basis-0 md:mb-0">
-                      <h2 className="text-blue-900 text-[26px] box-border clear-both leading-[28.6px] break-words mb-[19.8px] font-oswald md:text-[55px] md:leading-[60.5px] md:mb-[30px]">
-                        {manufacturerName} Lemon Law<br className="text-[26px] box-border leading-[28.6px] break-words md:text-[55px] md:leading-[60.5px]" />
-                        Information
-                      </h2>
+                  <div className="grid md:grid-cols-3 gap-8">
+                    
+                    {/* Main Content Column */}
+                    <div className="md:col-span-2 space-y-6">
                       
-                      <p className="box-border break-words my-[19.8px] md:my-[30px]">
-                        {data.introduction}
-                      </p>
-
-                      <h3 className="text-blue-900 text-[20px] font-bold mb-4 font-oswald">Your {manufacturerName} Lemon Law Rights</h3>
-                      <p className="box-border break-words my-[19.8px] md:my-[30px]">
-                        If your {manufacturerName} vehicle has recurring issues and has been taken to an authorized dealership for repairs, you might have a lemon law claim. Key points include:
-                      </p>
-                      <ul className="box-border list-disc break-words pl-5 mb-[19.8px]">
-                        <li className="text-zinc-600 mb-2">Claims can be brought even if you're no longer under manufacturer's warranty</li>
-                        <li className="text-zinc-600 mb-2">Manufacturer must have a reasonable opportunity to repair the vehicle</li>
-                        <li className="text-zinc-600 mb-2">If repairs cannot be completed in a reasonable number of attempts, you may be entitled to relief</li>
-                        <li className="text-zinc-600 mb-2">If successful, the manufacturer may pay reasonable attorneys' fees and costs</li>
-                      </ul>
-
-                      <h3 className="text-blue-900 text-[20px] font-bold mb-4 font-oswald">Is Your {manufacturerName} a Lemon?</h3>
-                      <p className="box-border break-words my-[19.8px] md:my-[30px]">
-                        Your {manufacturerName} may be covered under California state lemon law and federal lemon law. This applies to both new and used vehicles, whether purchased or leased.
-                      </p>
-
-                      <h4 className="text-blue-900 text-[18px] font-bold mb-3 font-oswald">Successful Claims Have Involved These {manufacturerName} Models:</h4>
-                      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-[19.8px]">
-                        {data.models?.map((model, index) => (
-                          <span key={index} className="bg-gray-100 px-3 py-1 rounded text-sm text-blue-900 font-semibold">
-                            {model}
-                          </span>
-                        ))}
+                      {/* Introduction */}
+                      <div className="prose max-w-none">
+                        <p className="text-lg leading-relaxed text-gray-700 mb-6">
+                          {data.introduction}
+                        </p>
                       </div>
-                      <div className="items-center box-border gap-x-[9px] flex flex-wrap break-words gap-y-[9px] mt-[19.8px] md:mt-[30px]">
-                        <div className="box-border break-words">
-                          <a href="/contact/" className="relative text-neutral-900 text-[20.25px] font-bold content-center bg-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block h-full leading-[30.375px] break-words text-center uppercase w-full border-yellow-400 bg-right px-6 py-3 border-2 border-solid font-oswald">Free Case Evaluation</a>
+
+                      {/* Is Your [Brand] a Lemon? Section */}
+                      <section>
+                        <h2 className="text-2xl font-bold text-blue-900 mb-4 font-oswald">
+                          Is Your {manufacturerName} a Lemon?
+                        </h2>
+                        <div className="bg-blue-50 p-6 rounded-lg mb-6">
+                          <h3 className="text-xl font-bold text-blue-900 mb-3 font-oswald">Covered Under:</h3>
+                          <ul className="list-disc list-inside space-y-2 text-gray-700">
+                            <li>State lemon law</li>
+                            <li>Federal lemon law</li>
+                            <li>Applies to new and used vehicles</li>
+                            <li>Covers purchased and leased vehicles</li>
+                          </ul>
                         </div>
-                      </div>
-                    </div>
-                    <div className="box-border basis-full grow break-words md:basis-0">
-                      <div className="box-border break-words mb-[19.8px] md:mb-[30px]">
-                        <h3 className="text-blue-900 text-[20px] font-bold mb-4 font-oswald">Common {manufacturerName} Issues:</h3>
-                        <ul className="box-border list-none break-words pl-5">
-                          {data.commonIssues.map((issue, index) => (
-                            <li key={index} className="text-blue-900 text-lg items-center box-border flex leading-[27px] list-disc break-words text-left mb-4 md:text-[22px] md:leading-[33px] md:mb-6">
-                              <div className="text-lg box-border leading-[27px] break-words mr-2 md:text-[22px] md:leading-[33px] md:mr-3">
-                                <span className="text-lg font-semibold bg-yellow-400/40 box-border block leading-[27px] break-words border-yellow-400 px-[10.8px] py-[1.8px] rounded-full border-2 border-solid md:text-[22px] md:leading-[33px] md:px-[15.92px] md:py-[5px]">{index + 1}</span>
+
+                        <p className="text-gray-700 mb-4">
+                          If your {manufacturerName} vehicle has recurring issues and has been taken to an authorized dealership for repairs, you might have a lemon law claim. Key points include:
+                        </p>
+                        
+                        <ul className="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                          <li>Claims can be brought even if you're no longer under manufacturer's warranty</li>
+                          <li>Manufacturer must have a reasonable opportunity to repair the vehicle</li>
+                          <li>If repairs cannot be completed in a reasonable number of attempts, you may be entitled to relief</li>
+                          <li>If successful, the manufacturer may pay reasonable attorneys' fees and costs</li>
+                        </ul>
+                      </section>
+
+                      {/* Successful Claims Models */}
+                      <section>
+                        <h3 className="text-xl font-bold text-blue-900 mb-4 font-oswald">
+                          Successful Claims Have Involved Models:
+                        </h3>
+                        <div className="bg-gray-50 p-4 rounded-lg">
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                            {data.models?.map((model, index) => (
+                              <div key={index} className="flex items-center">
+                                <span className="w-2 h-2 bg-blue-600 rounded-full mr-3"></span>
+                                <span className="text-gray-700 font-medium">{model}</span>
                               </div>
-                              <span className="text-lg font-bold box-border block leading-[27px] break-words font-oswald md:text-[22px] md:leading-[33px]">{issue}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+                            ))}
+                          </div>
+                        </div>
+                      </section>
 
-                      <div className="box-border break-words mb-[19.8px] md:mb-[30px]">
-                        <h4 className="text-blue-900 text-[18px] font-bold mb-3 font-oswald">Specific {manufacturerName} Problems Include:</h4>
-                        <ul className="box-border list-disc break-words pl-5">
+                      {/* Most Common Defects */}
+                      <section>
+                        <h2 className="text-2xl font-bold text-blue-900 mb-4 font-oswald">
+                          Most Common {manufacturerName} Defects
+                        </h2>
+                        <div className="space-y-4">
                           {data.detailedIssues?.map((issue, index) => (
-                            <li key={index} className="text-zinc-600 mb-2 text-[16px]">{issue}</li>
+                            <div key={index} className="flex items-start">
+                              <span className="flex-shrink-0 w-6 h-6 bg-yellow-400 text-black rounded-full flex items-center justify-center text-sm font-bold mr-3 mt-1">
+                                {index + 1}
+                              </span>
+                              <span className="text-gray-700">{issue}</span>
+                            </div>
                           ))}
-                        </ul>
+                        </div>
+                      </section>
+
+                      {/* Call to Action */}
+                      <section className="bg-blue-900 text-white p-6 rounded-lg">
+                        <h3 className="text-xl font-bold mb-3 font-oswald">
+                          Don't Let {manufacturerName} Keep Your Money for a Defective Vehicle
+                        </h3>
+                        <p className="mb-4">
+                          California law is on your side, and Lion Lemon attorneys have the experience to fight for your rights. 
+                          Contact us today for a free consultation.
+                        </p>
+                        <a 
+                          href="/contact/" 
+                          className="bg-yellow-400 text-black font-bold px-6 py-3 rounded-lg hover:bg-yellow-500 transition-colors duration-200 font-oswald uppercase inline-block"
+                        >
+                          Free Case Evaluation
+                        </a>
+                      </section>
+
+                    </div>
+
+                    {/* Sidebar */}
+                    <div className="space-y-6">
+                      
+                      {/* Contact Form */}
+                      <div className="bg-gray-50 p-6 rounded-lg">
+                        <h3 className="text-xl font-bold text-blue-900 mb-4 font-oswald">
+                          Free Case Evaluation
+                        </h3>
+                        <ContactForm />
                       </div>
 
-                      <div className="bg-blue-50 p-4 rounded-lg mb-[19.8px] md:mb-[30px]">
-                        <h4 className="text-blue-900 text-[18px] font-bold mb-3 font-oswald">Important:</h4>
-                        <p className="text-zinc-600 text-[16px] mb-2">
+                      {/* Success Story */}
+                      <div className="bg-green-50 p-6 rounded-lg border border-green-200">
+                        <h3 className="text-lg font-bold text-green-800 mb-3 font-oswald">
+                          Success Story
+                        </h3>
+                        <p className="text-green-700 text-sm mb-3">
+                          Lion Lemon recently helped a client recover $45,000 for their defective {manufacturerName} vehicle.
+                        </p>
+                        <a href="/case-results/" className="text-green-600 font-semibold hover:text-green-800 text-sm">
+                          View More Success Stories →
+                        </a>
+                      </div>
+
+                      {/* Important Info Box */}
+                      <div className="bg-blue-50 p-6 rounded-lg border border-blue-200">
+                        <h3 className="text-lg font-bold text-blue-900 mb-3 font-oswald">
+                          Important
+                        </h3>
+                        <p className="text-blue-800 text-sm mb-2">
                           If your {manufacturerName} has been in for repair multiple times for the same problem, or has been out of service for more than 30 days total, you may have a valid lemon law claim.
                         </p>
-                        <p className="text-zinc-600 text-[16px]">
+                        <p className="text-blue-800 text-sm">
                           California's lemon law covers both new and used vehicles under manufacturer warranty.
                         </p>
                       </div>
 
-                      <p className="box-border break-words mt-[19.8px] md:mt-[30px] text-[16px]">
-                        Don't let {manufacturerName} keep your money for a defective vehicle. California law is on your side, 
-                        and Lion Lemon attorneys have the experience to fight for your rights. Contact us today for a free consultation.
-                      </p>
                     </div>
+
                   </div>
                 </div>
               </div>
