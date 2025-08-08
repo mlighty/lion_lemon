@@ -16,9 +16,6 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   swcMinify: true,
-  experimental: {
-    optimizeCss: true,
-  },
   // Security headers
   async headers() {
     return [
