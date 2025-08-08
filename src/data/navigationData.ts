@@ -15,8 +15,8 @@ export const navigationData: NavigationData = {
     {
       id: 'about',
       label: 'About',
-      href: "https://lemonlawexperts.com/about/",
-      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border min-w-[200px] text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid md:scale-0",
+      href: "/about/",
+      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border min-w-[200px] text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid z-50",
       submenu: [
         {
           id: 'experts',
@@ -65,8 +65,8 @@ export const navigationData: NavigationData = {
     {
       id: 'lemon-law',
       label: 'Lemon Law',
-      href: "https://lemonlawexperts.com/california-lemon-law-rules/",
-      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border max-h-[840px] min-w-[200px] overflow-x-auto overflow-y-scroll text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid md:scale-0",
+      href: "/lemon-law/",
+      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border max-h-[840px] min-w-[200px] overflow-x-auto overflow-y-scroll text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid z-50",
       submenu: [
         { id: 'process', label: 'Lemon Law Process', href: "https://lemonlawexperts.com/the-lemon-law-process/" },
         { id: 'presumption', label: 'Lemon Law Presumption', href: "https://lemonlawexperts.com/lemon-law-presumption-definition/" },
@@ -80,8 +80,8 @@ export const navigationData: NavigationData = {
     {
       id: 'resources',
       label: 'Resources',
-      href: "https://lemonlawexperts.com/lemon-law-resource-center/",
-      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border min-w-[200px] text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid md:scale-0",
+      href: "/resources/",
+      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border min-w-[200px] text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid z-50",
       submenu: [
         { id: 'blog', label: 'Lemon Law Blog', href: "https://lemonlawexperts.com/blog/" },
         { id: 'faqs', label: 'Lemon Law FAQs', href: "https://lemonlawexperts.com/lemon-law-faqs/" },
@@ -95,8 +95,8 @@ export const navigationData: NavigationData = {
     {
       id: 'manufacturers',
       label: 'Manufacturers',
-      href: "https://lemonlawexperts.com/all-manufacturers/",
-      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border max-h-[840px] min-w-[200px] overflow-x-auto overflow-y-scroll text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid md:scale-0",
+      href: "/manufacturers/",
+      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border max-h-[840px] min-w-[200px] overflow-x-auto overflow-y-scroll text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid z-50",
       submenu: [
         { id: 'acura', label: 'Acura', href: "https://lemonlawexperts.com/acura-repurchase-lemon-law/" },
         { id: 'audi', label: 'Audi', href: "https://lemonlawexperts.com/audi-repurchase-lemon-law/" },
@@ -123,8 +123,8 @@ export const navigationData: NavigationData = {
     {
       id: 'locations',
       label: 'Locations',
-      href: "https://lemonlawexperts.com/our-locations/",
-      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border min-w-[200px] text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid md:scale-0",
+      href: "/locations/",
+      submenuClass: "absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border min-w-[200px] text-nowrap transform-none origin-[50%_0%] border border-zinc-50 pl-0 rounded-sm border-solid z-50",
       submenu: [
         { id: 'bakersfield', label: 'Bakersfield', href: "https://lemonlawexperts.com/bakersfield-lemon-law-lawyer/" },
         { id: 'el-segundo', label: 'El Segundo', href: "https://lemonlawexperts.com/lemon-law-lawyer-el-segundo/" },
@@ -145,7 +145,7 @@ export const navigationData: NavigationData = {
     {
       id: 'contact',
       label: 'Contact',
-      href: "https://lemonlawexperts.com/contact-our-attorneys/"
+      href: "/contact/"
     }
   ]
 } as const;

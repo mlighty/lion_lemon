@@ -3,6 +3,7 @@ import { navigationData } from '../../data/navigationData';
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
 
   return (
     <header role="banner" className="fixed bg-sky-950 box-border translate-y-[-0.00000253357px] w-full z-[900] top-0 inset-x-0 md:transform-none before:accent-auto before:box-border before:text-zinc-600 before:table before:text-lg before:not-italic before:normal-nums before:font-normal before:tracking-[normal] before:leading-[27px] before:list-outside before:list-disc before:table-fixed before:text-start before:indent-[0px] before:normal-case before:visible before:border-separate before:font-source_sans_pro after:accent-auto after:box-border after:clear-both after:text-zinc-600 after:table after:text-lg after:not-italic after:normal-nums after:font-normal after:tracking-[normal] after:leading-[27px] after:list-outside after:list-disc after:table-fixed after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-source_sans_pro">
@@ -37,18 +38,23 @@ export default function Header() {
           <div className="box-border max-w-none min-h-0 min-w-0 w-full md:max-w-[80%] md:min-h-[auto] md:min-w-[auto]">
             <ul className="text-zinc-50 items-center box-border flex justify-around list-none w-full pl-0">
               {navigationData.mainMenu.map((item) => (
-                <li key={item.id} className="relative box-border min-h-0 min-w-0 text-left text-nowrap md:min-h-[auto] md:min-w-[auto]">
+                <li 
+                  key={item.id} 
+                  className="relative box-border min-h-0 min-w-0 text-left text-nowrap md:min-h-[auto] md:min-w-[auto] group"
+                  onMouseEnter={() => item.submenu && setOpenDropdown(item.id)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
                   <a href={item.href} className="relative font-semibold bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block text-nowrap bg-right py-2 border-b-2 border-solid border-transparent">{item.label}</a>
                   <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/icon-5.svg" alt="Icon" className="box-border h-4 text-nowrap w-4" />
                   {item.submenu && (
-                    <ul className={item.submenuClass}>
+                    <ul className={`${item.submenuClass} ${openDropdown === item.id ? 'md:scale-100 opacity-100' : 'md:scale-0 opacity-0'} transition-all duration-200`}>
                       {item.submenu.map((subItem) => (
                         <li key={subItem.id} className="relative box-border text-nowrap">
                           <a href={subItem.href} className="relative text-sky-950 font-semibold bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block text-nowrap w-full bg-right p-2">{subItem.label}</a>
                           {subItem.submenu && (
                             <>
                               <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/icon-5.svg" alt="Icon" className="box-border h-4 text-nowrap w-4" />
-                              <ul className="absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border max-h-[840px] min-w-[200px] overflow-x-auto overflow-y-scroll text-nowrap transform-none origin-[0%_0%] border border-zinc-50 pl-0 rounded-sm border-solid right-0 top-0 md:scale-0">
+                              <ul className="absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border max-h-[840px] min-w-[200px] overflow-x-auto overflow-y-scroll text-nowrap transform-none origin-[0%_0%] border border-zinc-50 pl-0 rounded-sm border-solid right-0 top-0 md:scale-100 opacity-100 transition-all duration-200">
                                 {subItem.submenu.map((subSubItem) => (
                                   <li key={subSubItem.id} className="relative box-border text-nowrap">
                                     <a href={subSubItem.href} className="relative text-sky-950 font-semibold bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block text-nowrap w-full bg-right p-2">{subSubItem.label}</a>
