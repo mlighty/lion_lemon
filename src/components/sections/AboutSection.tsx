@@ -14,7 +14,7 @@ export default function AboutSection() {
             </h2>
           </header>
           <div className="box-border hidden min-h-0 min-w-0 text-right w-6/12 md:block md:min-h-[auto] md:min-w-[auto]">
-            <a href="https://lemonlawexperts.com/about/" className="relative text-neutral-900 font-bold bg-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block text-center uppercase border-yellow-400 bg-right px-6 py-3 border-2 border-solid font-oswald">Learn About Our Firm</a>
+            <a href="/about/" className="relative text-neutral-900 font-bold bg-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block text-center uppercase border-yellow-400 bg-right px-6 py-3 border-2 border-solid font-oswald">Learn About Lion Lemon</a>
           </div>
         </div>
         <div className="box-border">
@@ -27,7 +27,7 @@ export default function AboutSection() {
           </p>
         </div>
         <div className="box-border block text-center mt-8 md:hidden">
-          <a href="https://lemonlawexperts.com/about/" className="relative text-neutral-900 font-bold bg-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block uppercase border-yellow-400 bg-right px-6 py-3 border-2 border-solid font-oswald">Learn About Our Firm</a>
+          <a href="/about/" className="relative text-neutral-900 font-bold bg-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block uppercase border-yellow-400 bg-right px-6 py-3 border-2 border-solid font-oswald">Learn About Lion Lemon</a>
         </div>
       </div>
     </div>

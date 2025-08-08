@@ -9,10 +9,10 @@ export default function Header() {
       <div className="text-base items-center box-border flex justify-between leading-6 w-full border-zinc-50 px-[15px] py-2 border-b border-solid md:px-[51.2px]">
         <span className="text-yellow-400 box-border hidden min-h-0 min-w-0 md:block md:min-h-[auto] md:min-w-[auto]">Hablamos Español</span>
         <div className="box-border">
-          <a href="https://lemonlawexperts.com/" className="relative text-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border bg-right after:accent-auto after:box-border after:text-yellow-400 after:text-base after:not-italic after:normal-nums after:font-normal after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-source_sans_pro">
+          <a href="/" className="relative text-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border bg-right after:accent-auto after:box-border after:text-yellow-400 after:text-base after:not-italic after:normal-nums after:font-normal after:tracking-[normal] after:leading-6 after:list-outside after:list-disc after:text-start after:indent-[0px] after:normal-case after:visible after:border-separate after:font-source_sans_pro">
             <strong className="font-bold box-border">English</strong>
           </a>
-          <a href="https://lemonlawexperts.com/es" className="relative text-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border bg-right">
+          <a href="/es" className="relative text-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border bg-right">
             <strong className="font-bold box-border">Español</strong>
           </a>
         </div>
@@ -28,7 +28,7 @@ export default function Header() {
       </div>
       <div className="items-center bg-zinc-50 box-border flex justify-around p-4 md:bg-transparent md:justify-between">
         <div className="box-border flex h-auto md:h-full">
-          <a href="https://lemonlawexperts.com/" className="relative text-cyan-600 box-border block">
+          <a href="/" className="relative text-cyan-600 box-border block">
             <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/14.webp" alt="" sizes="(max-width: 335px) 100vw, 335px" className="aspect-[auto_335_/_78] box-border hidden max-w-full w-[335px] md:block" />
             <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/20.png" alt="" sizes="(max-width: 240px) 100vw, 240px" className="aspect-[auto_240_/_56] box-border block max-w-full w-60 md:hidden" />
           </a>
@@ -65,7 +65,7 @@ export default function Header() {
               ))}
             </ul>
           </div>
-          <a href="https://lemonlawexperts.com/search/" className="relative text-cyan-600 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border hidden min-h-0 min-w-0 bg-right mr-4 md:block md:min-h-[auto] md:min-w-[auto]">
+          <a href="/search/" className="relative text-cyan-600 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border hidden min-h-0 min-w-0 bg-right mr-4 md:block md:min-h-[auto] md:min-w-[auto]">
             <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/icon-6.svg" alt="Icon" className="box-border h-[18px] w-[18px]" />
           </a>
         </nav>

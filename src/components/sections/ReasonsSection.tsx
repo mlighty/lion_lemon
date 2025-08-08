@@ -8,14 +8,14 @@ export default function ReasonsSection() {
           <div className="box-border basis-full grow break-words mb-[19.8px] md:basis-0 md:mb-0">
             <h2 className="text-blue-900 text-[26px] box-border clear-both leading-[28.6px] break-words mb-[19.8px] font-oswald md:text-[55px] md:leading-[60.5px] md:mb-[30px]">
               5 Reasons To Choose<br className="text-[26px] box-border leading-[28.6px] break-words md:text-[55px] md:leading-[60.5px]" />
-              The Lemon Law Experts<sup className="text-[21.6667px] box-border leading-[23.8333px] break-words md:text-[45.8333px] md:leading-[50.4167px]"><small className="text-[17.3333px] box-border leading-[19.0667px] break-words md:text-[36.6667px] md:leading-[40.3333px]">®</small></sup>
+              Lion Lemon
             </h2>
             <p className="box-border break-words my-[19.8px] md:my-[30px]">
-              Our Lemon Law Experts are skilled in finding economic and expeditious solutions for our clients. We are dedicated to quality, we understand the law, and we pride ourselves in having a long-standing relationship with our clients and the community.
+              Lion Lemon attorneys are skilled in finding economic and expeditious solutions for our clients. We are dedicated to quality, we understand the law, and we pride ourselves in having a long-standing relationship with our clients and the community.
             </p>
             <div className="items-center box-border gap-x-[9px] flex flex-wrap break-words gap-y-[9px] mt-[19.8px] md:mt-[30px]">
               <div className="box-border break-words">
-                <a href="https://lemonlawexperts.com/contact-our-attorneys/" className="relative text-neutral-900 text-[20.25px] font-bold content-center bg-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block h-full leading-[30.375px] break-words text-center uppercase w-full border-yellow-400 bg-right px-6 py-3 border-2 border-solid font-oswald">Contact Us Today</a>
+                <a href="/contact/" className="relative text-neutral-900 text-[20.25px] font-bold content-center bg-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block h-full leading-[30.375px] break-words text-center uppercase w-full border-yellow-400 bg-right px-6 py-3 border-2 border-solid font-oswald">Contact Us Today</a>
               </div>
             </div>
           </div>
