@@ -44,20 +44,26 @@ export default function Header() {
                   onMouseEnter={() => item.submenu && setOpenDropdown(item.id)}
                   onMouseLeave={() => setOpenDropdown(null)}
                 >
-                  <a href={item.href} className="relative font-semibold bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block text-nowrap bg-right py-2 border-b-2 border-solid border-transparent">{item.label}</a>
-                  <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/icon-5.svg" alt="Icon" className="box-border h-4 text-nowrap w-4" />
+                  <a href={item.href} className="relative font-semibold box-border inline-block text-nowrap py-2 hover:text-yellow-400 transition-colors duration-200">{item.label}</a>
+                  {item.submenu && (
+                    <svg className="inline-block w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                    </svg>
+                  )}
                   {item.submenu && (
                     <ul className={`${item.submenuClass} ${openDropdown === item.id ? 'md:scale-100 opacity-100' : 'md:scale-0 opacity-0'} transition-all duration-200`}>
                       {item.submenu.map((subItem) => (
                         <li key={subItem.id} className="relative box-border text-nowrap">
-                          <a href={subItem.href} className="relative text-sky-950 font-semibold bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block text-nowrap w-full bg-right p-2">{subItem.label}</a>
+                          <a href={subItem.href} className="relative text-sky-950 font-semibold box-border inline-block text-nowrap w-full p-2 hover:bg-gray-100">{subItem.label}</a>
                           {subItem.submenu && (
                             <>
-                              <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/icon-5.svg" alt="Icon" className="box-border h-4 text-nowrap w-4" />
+                              <svg className="inline-block w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20">
+                                <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                              </svg>
                               <ul className="absolute bg-white shadow-[rgba(0,0,0,0.3)_0px_0px_5px_0px] box-border max-h-[840px] min-w-[200px] overflow-x-auto overflow-y-scroll text-nowrap transform-none origin-[0%_0%] border border-zinc-50 pl-0 rounded-sm border-solid right-0 top-0 md:scale-100 opacity-100 transition-all duration-200">
                                 {subItem.submenu.map((subSubItem) => (
                                   <li key={subSubItem.id} className="relative box-border text-nowrap">
-                                    <a href={subSubItem.href} className="relative text-sky-950 font-semibold bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block text-nowrap w-full bg-right p-2">{subSubItem.label}</a>
+                                    <a href={subSubItem.href} className="relative text-sky-950 font-semibold box-border inline-block text-nowrap w-full p-2 hover:bg-gray-100">{subSubItem.label}</a>
                                   </li>
                                 ))}
                               </ul>
