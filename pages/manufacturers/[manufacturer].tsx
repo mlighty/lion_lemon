@@ -6,7 +6,6 @@ import Footer from '../../src/components/layout/Footer';
 import ContactForm from '../../src/components/forms/ContactForm';
 import AccessibilityWidget from '../../src/components/ui/AccessibilityWidget';
 import CookieBanner from '../../src/components/ui/CookieBanner';
-import CookieDialog from '../../src/components/ui/CookieDialog';
 import ChatWidget from '../../src/components/ui/ChatWidget';
 import CallTextBar from '../../src/components/ui/CallTextBar';
 import SchemaMarkup from '../../src/components/seo/SchemaMarkup';
@@ -233,7 +232,6 @@ const manufacturerData: Record<string, {
 };
 
 export default function ManufacturerPage({ manufacturer, manufacturerName }: ManufacturerPageProps) {
-  const [isCookieDialogOpen, setIsCookieDialogOpen] = useState(false);
   const data = manufacturerData[manufacturer];
   
   if (!data) {
@@ -436,8 +434,7 @@ export default function ManufacturerPage({ manufacturer, manufacturerName }: Man
           </main>
         </div>
         
-        <CookieBanner onSettingsClick={() => setIsCookieDialogOpen(true)} />
-        <CookieDialog isOpen={isCookieDialogOpen} onClose={() => setIsCookieDialogOpen(false)} />
+        <CookieBanner />
         <Footer />
         <CallTextBar />
         <ChatWidget />
