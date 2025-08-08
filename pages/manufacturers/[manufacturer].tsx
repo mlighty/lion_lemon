@@ -11,21 +11,64 @@ interface ManufacturerPageProps {
   manufacturerName: string;
 }
 
-const manufacturerData: Record<string, { name: string; description: string; commonIssues: string[] }> = {
+const manufacturerData: Record<string, { 
+  name: string; 
+  description: string; 
+  introduction: string;
+  models: string[];
+  commonIssues: string[];
+  detailedIssues: string[];
+}> = {
   'acura': {
     name: 'Acura',
     description: 'Acura vehicles are known for luxury and performance, but some models may experience transmission, electrical, or engine issues that qualify under California lemon law.',
-    commonIssues: ['Transmission problems', 'Electrical system failures', 'Engine defects', 'Air conditioning issues']
+    introduction: 'Acura, a division of Honda America Motor Co., Inc., was introduced to the United States in 1986. Their slogan is "Precision Crafted Automobiles." While Acura manufactures high-end vehicles, some cars may be considered "lemons" if they have substantial repair issues that cannot be fixed after a reasonable number of repair attempts.',
+    models: ['Acura CL', 'Acura TL', 'Acura ILX', 'Acura TLX', 'Acura RLX', 'Acura RDX', 'Acura MDX', 'Acura NSX', 'Acura TSX', 'Acura ZDX'],
+    commonIssues: ['Transmission Problems', 'Steering Issues', 'Engine Defects', 'Suspension Problems'],
+    detailedIssues: [
+      'Transmission jerking between gears',
+      'Steering wheel locking while driving', 
+      'Transmission hesitating on acceleration',
+      'Engine burning excessive oil',
+      'Transmission failure while driving',
+      'Suspension rattling and noise',
+      'Check engine light illuminating',
+      'Engine failure and stalling'
+    ]
   },
   'audi': {
     name: 'Audi',
     description: 'Audi luxury vehicles may develop complex electrical, transmission, or engine problems covered by California lemon law protections.',
-    commonIssues: ['Electrical system failures', 'Transmission defects', 'Engine problems', 'Suspension issues']
+    introduction: 'Audi, the German luxury automotive manufacturer, has been producing premium vehicles since 1909. Known for their "Vorsprung durch Technik" (Advancement through Technology) slogan, Audi vehicles feature advanced engineering. However, some models may experience defects that qualify under California lemon law.',
+    models: ['Audi A3', 'Audi A4', 'Audi A5', 'Audi A6', 'Audi A7', 'Audi A8', 'Audi Q3', 'Audi Q5', 'Audi Q7', 'Audi Q8', 'Audi e-tron'],
+    commonIssues: ['Electrical System Failures', 'Transmission Defects', 'Engine Problems', 'Suspension Issues'],
+    detailedIssues: [
+      'MMI infotainment system malfunctions',
+      'DSG transmission jerking and hesitation',
+      'Oil consumption issues in TFSI engines',
+      'Air suspension failures',
+      'Carbon buildup in direct injection engines',
+      'Electrical component failures',
+      'Timing chain stretch problems',
+      'Water pump failures'
+    ]
   },
   'bmw': {
     name: 'BMW',
     description: 'BMW vehicles may experience engine, transmission, electrical, or cooling system defects that qualify for lemon law protection in California.',
-    commonIssues: ['Engine cooling problems', 'Transmission issues', 'Electrical failures', 'Fuel system defects']
+    introduction: 'BMW (Bayerische Motoren Werke), founded in 1916, is a German luxury vehicle manufacturer known for "The Ultimate Driving Machine." While BMW produces high-performance luxury vehicles, some models may develop recurring problems that cannot be adequately repaired, qualifying them as lemons under California law.',
+    models: ['BMW 3 Series', 'BMW 5 Series', 'BMW 7 Series', 'BMW X1', 'BMW X3', 'BMW X5', 'BMW X7', 'BMW i3', 'BMW i8', 'BMW Z4'],
+    commonIssues: ['Engine Cooling Problems', 'Transmission Issues', 'Electrical Failures', 'Fuel System Defects'],
+    detailedIssues: [
+      'Water pump failures causing overheating',
+      'High-pressure fuel pump failures',
+      'Transmission valve body malfunctions',
+      'iDrive system glitches and reboots',
+      'Turbocharger wastegate rattle',
+      'Electric water pump failures',
+      'Vanos solenoid failures',
+      'Window regulator malfunctions'
+    ]
   },
   'chevrolet': {
     name: 'Chevrolet',
@@ -55,7 +98,19 @@ const manufacturerData: Record<string, { name: string; description: string; comm
   'honda': {
     name: 'Honda',
     description: 'Honda vehicles may develop transmission, engine, electrical, or safety defects that qualify for lemon law protection in California.',
-    commonIssues: ['Transmission problems', 'Engine defects', 'Electrical issues', 'Air conditioning failures']
+    introduction: 'Honda Motor Co., Ltd., established in 1948, is renowned for producing reliable, fuel-efficient vehicles. Despite their reputation for quality, some Honda models may experience recurring defects, particularly with CVT transmissions and certain engine issues that qualify under California lemon law.',
+    models: ['Honda Civic', 'Honda Accord', 'Honda CR-V', 'Honda Pilot', 'Honda Odyssey', 'Honda HR-V', 'Honda Passport', 'Honda Ridgeline', 'Honda Fit', 'Honda Insight'],
+    commonIssues: ['Transmission Problems', 'Engine Defects', 'Electrical Issues', 'Air Conditioning Failures'],
+    detailedIssues: [
+      'CVT transmission juddering and failure',
+      'VTC actuator noise and failure',
+      'Air conditioning compressor clutch failure',
+      'Paint peeling and clearcoat issues',
+      'Infotainment system freezing',
+      'Engine oil dilution problems',
+      'Power steering pump failures',
+      'Sliding door problems in Odyssey'
+    ]
   },
   'hyundai': {
     name: 'Hyundai',
@@ -100,7 +155,19 @@ const manufacturerData: Record<string, { name: string; description: string; comm
   'toyota': {
     name: 'Toyota',
     description: 'Toyota vehicles may develop engine, transmission, electrical, or hybrid system problems covered by California lemon law protections.',
-    commonIssues: ['Engine defects', 'Transmission problems', 'Electrical system failures', 'Hybrid system issues']
+    introduction: 'Toyota Motor Corporation, founded in 1937, is known for reliability and quality with their "Toyota Way" philosophy. However, even Toyota vehicles can sometimes develop persistent defects that qualify under California lemon law, particularly in complex hybrid systems and newer technologies.',
+    models: ['Toyota Camry', 'Toyota Corolla', 'Toyota Prius', 'Toyota RAV4', 'Toyota Highlander', 'Toyota 4Runner', 'Toyota Tacoma', 'Toyota Tundra', 'Toyota Sienna', 'Toyota Avalon'],
+    commonIssues: ['Engine Defects', 'Transmission Problems', 'Electrical System Failures', 'Hybrid System Issues'],
+    detailedIssues: [
+      'Oil consumption problems in 2AZ-FE engines',
+      'CVT transmission shuddering and failure',
+      'Hybrid battery pack failures',
+      'Prius headlight condensation issues',
+      'RAV4 transmission vibration',
+      'Entune infotainment system freezing',
+      'Camry engine sludge buildup',
+      'Tacoma transmission gear hunting'
+    ]
   },
   'volkswagen': {
     name: 'Volkswagen',
@@ -161,16 +228,37 @@ export default function ManufacturerPage({ manufacturer, manufacturerName }: Man
                     <div className="box-border basis-full grow break-words mb-[19.8px] md:basis-0 md:mb-0">
                       <h2 className="text-blue-900 text-[26px] box-border clear-both leading-[28.6px] break-words mb-[19.8px] font-oswald md:text-[55px] md:leading-[60.5px] md:mb-[30px]">
                         {manufacturerName} Lemon Law<br className="text-[26px] box-border leading-[28.6px] break-words md:text-[55px] md:leading-[60.5px]" />
-                        Expert Attorneys
+                        Information
                       </h2>
+                      
                       <p className="box-border break-words my-[19.8px] md:my-[30px]">
-                        {data.description}
+                        {data.introduction}
                       </p>
+
+                      <h3 className="text-blue-900 text-[20px] font-bold mb-4 font-oswald">Your {manufacturerName} Lemon Law Rights</h3>
                       <p className="box-border break-words my-[19.8px] md:my-[30px]">
-                        If you own a defective {manufacturerName} vehicle in California, you have legal rights under the state's lemon law. 
-                        Lion Lemon attorneys specialize in {manufacturerName} lemon law cases and can help you get the compensation you deserve - 
-                        whether that's a full refund, replacement vehicle, or cash settlement.
+                        If your {manufacturerName} vehicle has recurring issues and has been taken to an authorized dealership for repairs, you might have a lemon law claim. Key points include:
                       </p>
+                      <ul className="box-border list-disc break-words pl-5 mb-[19.8px]">
+                        <li className="text-zinc-600 mb-2">Claims can be brought even if you're no longer under manufacturer's warranty</li>
+                        <li className="text-zinc-600 mb-2">Manufacturer must have a reasonable opportunity to repair the vehicle</li>
+                        <li className="text-zinc-600 mb-2">If repairs cannot be completed in a reasonable number of attempts, you may be entitled to relief</li>
+                        <li className="text-zinc-600 mb-2">If successful, the manufacturer may pay reasonable attorneys' fees and costs</li>
+                      </ul>
+
+                      <h3 className="text-blue-900 text-[20px] font-bold mb-4 font-oswald">Is Your {manufacturerName} a Lemon?</h3>
+                      <p className="box-border break-words my-[19.8px] md:my-[30px]">
+                        Your {manufacturerName} may be covered under California state lemon law and federal lemon law. This applies to both new and used vehicles, whether purchased or leased.
+                      </p>
+
+                      <h4 className="text-blue-900 text-[18px] font-bold mb-3 font-oswald">Successful Claims Have Involved These {manufacturerName} Models:</h4>
+                      <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-[19.8px]">
+                        {data.models?.map((model, index) => (
+                          <span key={index} className="bg-gray-100 px-3 py-1 rounded text-sm text-blue-900 font-semibold">
+                            {model}
+                          </span>
+                        ))}
+                      </div>
                       <div className="items-center box-border gap-x-[9px] flex flex-wrap break-words gap-y-[9px] mt-[19.8px] md:mt-[30px]">
                         <div className="box-border break-words">
                           <a href="/contact/" className="relative text-neutral-900 text-[20.25px] font-bold content-center bg-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block h-full leading-[30.375px] break-words text-center uppercase w-full border-yellow-400 bg-right px-6 py-3 border-2 border-solid font-oswald">Free Case Evaluation</a>
@@ -179,7 +267,7 @@ export default function ManufacturerPage({ manufacturer, manufacturerName }: Man
                     </div>
                     <div className="box-border basis-full grow break-words md:basis-0">
                       <div className="box-border break-words mb-[19.8px] md:mb-[30px]">
-                        <h3 className="text-blue-900 text-[20px] font-bold mb-4 font-oswald">Common {manufacturerName} Defects:</h3>
+                        <h3 className="text-blue-900 text-[20px] font-bold mb-4 font-oswald">Common {manufacturerName} Issues:</h3>
                         <ul className="box-border list-none break-words pl-5">
                           {data.commonIssues.map((issue, index) => (
                             <li key={index} className="text-blue-900 text-lg items-center box-border flex leading-[27px] list-disc break-words text-left mb-4 md:text-[22px] md:leading-[33px] md:mb-6">
@@ -191,7 +279,27 @@ export default function ManufacturerPage({ manufacturer, manufacturerName }: Man
                           ))}
                         </ul>
                       </div>
-                      <p className="box-border break-words mt-[19.8px] md:mt-[30px]">
+
+                      <div className="box-border break-words mb-[19.8px] md:mb-[30px]">
+                        <h4 className="text-blue-900 text-[18px] font-bold mb-3 font-oswald">Specific {manufacturerName} Problems Include:</h4>
+                        <ul className="box-border list-disc break-words pl-5">
+                          {data.detailedIssues?.map((issue, index) => (
+                            <li key={index} className="text-zinc-600 mb-2 text-[16px]">{issue}</li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="bg-blue-50 p-4 rounded-lg mb-[19.8px] md:mb-[30px]">
+                        <h4 className="text-blue-900 text-[18px] font-bold mb-3 font-oswald">Important:</h4>
+                        <p className="text-zinc-600 text-[16px] mb-2">
+                          If your {manufacturerName} has been in for repair multiple times for the same problem, or has been out of service for more than 30 days total, you may have a valid lemon law claim.
+                        </p>
+                        <p className="text-zinc-600 text-[16px]">
+                          California's lemon law covers both new and used vehicles under manufacturer warranty.
+                        </p>
+                      </div>
+
+                      <p className="box-border break-words mt-[19.8px] md:mt-[30px] text-[16px]">
                         Don't let {manufacturerName} keep your money for a defective vehicle. California law is on your side, 
                         and Lion Lemon attorneys have the experience to fight for your rights. Contact us today for a free consultation.
                       </p>
