@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Header from '../../src/components/layout/Header';
 import Footer from '../../src/components/layout/Footer';
+import ContactForm from '../../src/components/forms/ContactForm';
 import SchemaMarkup from '../../src/components/seo/SchemaMarkup';
 
 interface ManufacturerPageProps {
@@ -138,105 +139,66 @@ export default function ManufacturerPage({ manufacturer, manufacturerName }: Man
           <main id="main-content" className="box-border">
             <article className="bg-white box-border">
               
-              {/* Hero Section */}
-              <section className="bg-slate-900 text-white py-20 px-4">
-                <div className="max-w-4xl mx-auto text-center">
-                  <h1 className="text-4xl md:text-6xl font-bold mb-6 font-oswald">
-                    {manufacturerName} Lemon Law Attorney
-                  </h1>
-                  <p className="text-xl md:text-2xl mb-8">
-                    California's Premier {manufacturerName} Lemon Law Specialists
-                  </p>
-                  <p className="text-lg mb-8 max-w-3xl mx-auto">
-                    {data.description}
-                  </p>
-                  <a 
-                    href="/contact/" 
-                    className="bg-yellow-400 text-black font-bold px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors duration-200 font-oswald uppercase"
-                  >
-                    Free Case Evaluation
-                  </a>
-                </div>
-              </section>
-
-              {/* Common Issues Section */}
-              <section className="py-16 px-4 bg-gray-50">
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900 font-oswald">
-                    Common {manufacturerName} Lemon Law Issues
-                  </h2>
-                  <div className="grid md:grid-cols-2 gap-8">
-                    {data.commonIssues.map((issue, index) => (
-                      <div key={index} className="bg-white p-6 rounded-lg shadow-md">
-                        <h3 className="text-xl font-bold mb-3 text-blue-900 font-oswald">
-                          {issue}
-                        </h3>
-                        <p className="text-gray-700">
-                          If your {manufacturerName} vehicle has experienced {issue.toLowerCase()}, you may be entitled to a full refund or replacement under California lemon law.
-                        </p>
-                      </div>
-                    ))}
+              {/* Hero Section - matching homepage structure */}
+              <header className="relative bg-slate-900 box-border flex flex-col justify-center w-full overflow-hidden pt-0 pb-10 md:block md:flex-row md:justify-normal md:pt-10">
+                <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/11.webp" alt={`${manufacturerName} lemon law attorneys helping clients with defective vehicles`} sizes="(max-width: 1440px) 100vw, 1440px" className="static aspect-[auto_1440_/_734] box-border hidden h-full max-w-full object-cover w-full right-0 inset-y-0 md:absolute md:block" loading="lazy" />
+                <img src="https://c.animaapp.com/me11n5bffLhWIi/assets/16.webp" alt={`${manufacturerName} lemon law mobile hero image`} sizes="(max-width: 960px) 100vw, 960px" className="static aspect-[auto_960_/_866] box-border block h-full max-w-full min-h-[auto] min-w-[auto] object-cover w-full right-0 inset-y-0 md:absolute md:hidden md:min-h-0 md:min-w-0" loading="lazy" />
+                <div className="static items-center box-border flex flex-col min-h-[auto] min-w-[auto] w-full pt-6 px-4 left-[60%] md:relative md:[align-items:normal] md:block md:flex-row md:min-h-0 md:min-w-0 md:w-[500px] md:pt-0">
+                  <h1 className="text-white text-sm box-border clear-both tracking-[4.48px] leading-5 min-h-[auto] min-w-[auto] font-source_sans_pro md:min-h-0 md:min-w-0">California {manufacturerName} Lemon Law Attorneys</h1>
+                  <span className="text-zinc-50 text-5xl box-border block leading-[60px] min-h-[auto] min-w-[auto] text-center md:text-[68px] md:inline md:leading-[85px] md:min-h-0 md:min-w-0 md:text-left">
+                    Have A {manufacturerName} Lemon? <span className="text-yellow-400 text-5xl box-border block leading-[60px] text-center md:text-[68px] md:leading-[85px] md:text-left">We Can Help.</span>
+                  </span>
+                  <div className="box-border max-w-none min-h-[auto] min-w-[auto] w-full mt-4 md:max-w-md md:min-h-0 md:min-w-0">
+                    <ContactForm />
                   </div>
                 </div>
-              </section>
+              </header>
 
-              {/* Why Choose Lion Lemon Section */}
-              <section className="py-16 px-4 bg-white">
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-blue-900 font-oswald">
-                    Why Choose Lion Lemon for Your {manufacturerName} Case?
-                  </h2>
-                  <div className="grid md:grid-cols-3 gap-8">
-                    <div className="text-center">
-                      <div className="bg-yellow-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-black">1</span>
+              {/* Content Section - matching homepage layout */}
+              <div className="bg-white box-border clear-both flow-root max-w-full w-full mx-auto px-[19.98px] py-[37.5px] md:w-auto md:p-[60px]">
+                <div className="box-border mx-auto">
+                  <div className="box-border clear-both gap-x-9 flex flex-wrap max-w-full gap-y-9 w-[345px] mx-auto md:flex-nowrap md:w-[1080px]">
+                    <div className="box-border basis-full grow break-words mb-[19.8px] md:basis-0 md:mb-0">
+                      <h2 className="text-blue-900 text-[26px] box-border clear-both leading-[28.6px] break-words mb-[19.8px] font-oswald md:text-[55px] md:leading-[60.5px] md:mb-[30px]">
+                        {manufacturerName} Lemon Law<br className="text-[26px] box-border leading-[28.6px] break-words md:text-[55px] md:leading-[60.5px]" />
+                        Expert Attorneys
+                      </h2>
+                      <p className="box-border break-words my-[19.8px] md:my-[30px]">
+                        {data.description}
+                      </p>
+                      <p className="box-border break-words my-[19.8px] md:my-[30px]">
+                        If you own a defective {manufacturerName} vehicle in California, you have legal rights under the state's lemon law. 
+                        Lion Lemon attorneys specialize in {manufacturerName} lemon law cases and can help you get the compensation you deserve - 
+                        whether that's a full refund, replacement vehicle, or cash settlement.
+                      </p>
+                      <div className="items-center box-border gap-x-[9px] flex flex-wrap break-words gap-y-[9px] mt-[19.8px] md:mt-[30px]">
+                        <div className="box-border break-words">
+                          <a href="/contact/" className="relative text-neutral-900 text-[20.25px] font-bold content-center bg-yellow-400 bg-[linear-gradient(rgba(0,0,0,0)_calc(100%_-_2px),rgb(38,121,184)_1px)] bg-no-repeat bg-size-[0px] box-border inline-block h-full leading-[30.375px] break-words text-center uppercase w-full border-yellow-400 bg-right px-6 py-3 border-2 border-solid font-oswald">Free Case Evaluation</a>
+                        </div>
                       </div>
-                      <h3 className="text-xl font-bold mb-3 font-oswald">No Upfront Costs</h3>
-                      <p>We work on contingency - you don't pay unless we win your case.</p>
                     </div>
-                    <div className="text-center">
-                      <div className="bg-yellow-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-black">2</span>
+                    <div className="box-border basis-full grow break-words md:basis-0">
+                      <div className="box-border break-words mb-[19.8px] md:mb-[30px]">
+                        <h3 className="text-blue-900 text-[20px] font-bold mb-4 font-oswald">Common {manufacturerName} Defects:</h3>
+                        <ul className="box-border list-none break-words pl-5">
+                          {data.commonIssues.map((issue, index) => (
+                            <li key={index} className="text-blue-900 text-lg items-center box-border flex leading-[27px] list-disc break-words text-left mb-4 md:text-[22px] md:leading-[33px] md:mb-6">
+                              <div className="text-lg box-border leading-[27px] break-words mr-2 md:text-[22px] md:leading-[33px] md:mr-3">
+                                <span className="text-lg font-semibold bg-yellow-400/40 box-border block leading-[27px] break-words border-yellow-400 px-[10.8px] py-[1.8px] rounded-full border-2 border-solid md:text-[22px] md:leading-[33px] md:px-[15.92px] md:py-[5px]">{index + 1}</span>
+                              </div>
+                              <span className="text-lg font-bold box-border block leading-[27px] break-words font-oswald md:text-[22px] md:leading-[33px]">{issue}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <h3 className="text-xl font-bold mb-3 font-oswald">{manufacturerName} Expertise</h3>
-                      <p>Specialized knowledge of {manufacturerName} defects and recall issues.</p>
-                    </div>
-                    <div className="text-center">
-                      <div className="bg-yellow-400 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl font-bold text-black">3</span>
-                      </div>
-                      <h3 className="text-xl font-bold mb-3 font-oswald">Proven Results</h3>
-                      <p>Millions recovered for {manufacturerName} lemon law clients in California.</p>
+                      <p className="box-border break-words mt-[19.8px] md:mt-[30px]">
+                        Don't let {manufacturerName} keep your money for a defective vehicle. California law is on your side, 
+                        and Lion Lemon attorneys have the experience to fight for your rights. Contact us today for a free consultation.
+                      </p>
                     </div>
                   </div>
                 </div>
-              </section>
-
-              {/* Call to Action */}
-              <section className="py-16 px-4 bg-blue-900 text-white text-center">
-                <div className="max-w-4xl mx-auto">
-                  <h2 className="text-3xl md:text-4xl font-bold mb-6 font-oswald">
-                    Is Your {manufacturerName} a Lemon?
-                  </h2>
-                  <p className="text-xl mb-8">
-                    Get a free case evaluation from California's leading {manufacturerName} lemon law attorneys.
-                  </p>
-                  <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
-                    <a 
-                      href="tel:877-891-1876" 
-                      className="bg-yellow-400 text-black font-bold px-8 py-4 rounded-lg hover:bg-yellow-500 transition-colors duration-200 font-oswald"
-                    >
-                      Call (877) 891-1876
-                    </a>
-                    <a 
-                      href="/contact/" 
-                      className="border-2 border-yellow-400 text-yellow-400 font-bold px-8 py-4 rounded-lg hover:bg-yellow-400 hover:text-black transition-colors duration-200 font-oswald"
-                    >
-                      Free Online Consultation
-                    </a>
-                  </div>
-                </div>
-              </section>
+              </div>
 
             </article>
           </main>
